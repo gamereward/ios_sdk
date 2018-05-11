@@ -77,13 +77,12 @@ public class GameReward{
         let endIndex = secret!.index(startIndex, offsetBy: len-1)
         let str : String = String(secret![startIndex...endIndex])
         let str1 = MD5(str+String(t))
-        return str1;
+        return str1
     }
     
     private static func Post(action : String, params : [String:String], callback: @escaping ([String:Any]) ->()) -> Void
     {
         let url = URL(string: apiUrl+action)
-        
         // post the data
         var request = URLRequest(url:url!)
         request.httpMethod = "POST"
@@ -310,7 +309,7 @@ public class GameReward{
     /// <param name="functionName">The name of function you want to call. If the script have return statement in global scope, the functionName can be empty</param>
     /// <param name="parameters">The parameters to pass to the function</param>
     /// <param name="callback">Call when server response result.</param>
-    public static func CallServerScript(scriptName : String , functionName : String , parameters : [String:Any] ,  callback :@escaping (Int,String,[Any])->()) -> Void
+    public static func CallServerScript(scriptName : String , functionName : String , parameters : [Any] ,  callback :@escaping (Int,String,[Any])->()) -> Void
     {
         var pars : [String:String] = [:]
         var error : Int = 1
