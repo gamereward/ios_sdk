@@ -45,7 +45,7 @@ func rstr2tr(_ input: [CUnsignedChar]) -> String {
  * Convert a raw string to a hex string
  */
 func rstr2hex(_ input: [CUnsignedChar]) -> String {
-    let hexTab: [Character] = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "b", "b", "e", "f"]
+    let hexTab: [Character] = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"]
     var output: [Character] = []
     
     for i in 0..<input.count {
