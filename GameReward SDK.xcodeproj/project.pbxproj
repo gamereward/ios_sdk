@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		09804F6F20A2DFF80089C506 /* GameReward_SDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 09804F6D20A2DFF80089C506 /* GameReward_SDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09804F7620A2E04F0089C506 /* GameReward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09804F7520A2E04F0089C506 /* GameReward.swift */; };
+		09A47F1E20A3F2F800020B8D /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A47F1D20A3F2F800020B8D /* MD5.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		09804F6A20A2DFF80089C506 /* GameReward_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GameReward_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09804F6D20A2DFF80089C506 /* GameReward_SDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameReward_SDK.h; sourceTree = "<group>"; };
 		09804F6E20A2DFF80089C506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09804F7520A2E04F0089C506 /* GameReward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameReward.swift; sourceTree = "<group>"; };
+		09A47F1D20A3F2F800020B8D /* MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD5.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,8 @@
 			children = (
 				09804F6D20A2DFF80089C506 /* GameReward_SDK.h */,
 				09804F6E20A2DFF80089C506 /* Info.plist */,
+				09804F7520A2E04F0089C506 /* GameReward.swift */,
+				09A47F1D20A3F2F800020B8D /* MD5.swift */,
 			);
 			path = "GameReward SDK";
 			sourceTree = "<group>";
@@ -95,6 +101,7 @@
 				TargetAttributes = {
 					09804F6920A2DFF80089C506 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -130,6 +137,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09804F7620A2E04F0089C506 /* GameReward.swift in Sources */,
+				09A47F1E20A3F2F800020B8D /* MD5.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +268,7 @@
 		09804F7320A2DFF80089C506 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -275,6 +285,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.gamereward.GameReward-SDK";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -283,6 +294,7 @@
 		09804F7420A2DFF80089C506 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
