@@ -541,7 +541,7 @@ public class GameReward{
             let error : Int = results["error"] as! Int
             let message : String = results["message"] as! String
             var args : [String:Any] = [:]
-            let transastions = results["transactions"] as? Transaction
+            let transastions = results["transactions"] as? [Transaction]
             if error == 0
             {
                 if transastions != nil
